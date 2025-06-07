@@ -1,0 +1,128 @@
+/* ====================================================================== */
+/*  Campus Life – external stylesheet                                     */
+/*  Author: Amanda Rodriguez                                              */
+/*  Purpose: Styles the Campus Life website and documents each rule set   */
+/* ====================================================================== */
+
+
+/* -------------------------  GLOBAL / RESET  --------------------------- */
+body {
+  margin: 0;                          /* Removes default margin */
+  padding: 0;                         /* Removes default padding */
+  font-family: Arial, sans-serif;     /* Sets a clean, readable font */
+  color: #000;                        /* Sets text color to black */
+  background: #fff;                   /* Sets background to white */
+}
+
+
+/* ----------------------------  HEADER  -------------------------------- */
+header {
+  display: flex;                      /* Enables Flexbox layout */
+  justify-content: space-between;    /* Spaces logo and nav apart */
+  align-items: center;               /* Vertically centers items */
+  padding: 1rem 2rem;                /* Adds space around the header */
+  border-bottom: 2px solid #ddd;     /* Light gray line under header */
+}
+
+header figure,
+header div {
+  margin: 0;                          /* Removes default margin */
+}
+
+header img {
+  height: 60px;                       /* Sets fixed height for logo */
+}
+
+
+/* --------------------------  NAVIGATION  ------------------------------ */
+nav ul {
+  list-style: none;                  /* Removes bullet points */
+  display: flex;                     /* Horizontally lays out nav items */
+  gap: 1.5rem;                       /* Adds spacing between nav items */
+  align-items: center;              /* Aligns items vertically */
+  padding: 0;                        /* Removes default padding */
+  margin: 0;                         /* Removes default margin */
+}
+
+nav li {
+  display: inline;                   /* Makes list items inline */
+}
+
+nav a {
+  text-decoration: none;             /* Removes underline from links */
+  color: #000;                       /* Sets link color to black */
+  font-weight: bold;                /* Makes links bold */
+}
+
+nav input[type="text"] {
+  padding: 6px 10px;                 /* Adds space inside input box */
+  border: none;                      /* Removes default border */
+  border-radius: 5px;                /* Rounds input corners */
+  background-color: #000;            /* Sets background to black */
+  color: white;                      /* Sets text color to white */
+  font-weight: bold;                /* Makes input text bold */
+}
+
+
+/* -------------------------  MAIN TITLE  ------------------------------- */
+main h1 {
+  text-align: center;                /* Centers the heading text */
+  font-size: 3rem;                   /* Enlarges the heading */
+  font-weight: bold;                /* Makes heading bold */
+  margin: 2rem 0;                    /* Adds vertical space above/below */
+}
+
+
+/* ---------------------  MAIN IMAGE & PARAGRAPH  ----------------------- */
+.intro-section img,
+.about-section img {
+  width: 100%;                       /* Makes image responsive */
+  max-width: 800px;                  /* Limits image size */
+  display: block;                    /* Prevents inline gaps */
+  margin: 0 auto;                    /* Centers image horizontally */
+  border-radius: 6px;                /* Rounds image corners */
+}
+
+.intro-section p,
+.about-section p {
+  max-width: 900px;                  /* Restricts line length */
+  margin: 1.5rem auto;               /* Centers paragraph with margin */
+  text-align: center;                /* Centers the text */
+  font-size: 1.1rem;                 /* Increases text size slightly */
+  line-height: 1.6;                  /* Increases line spacing */
+  padding: 0 1rem;                   /* Adds some side padding */
+}
+
+
+/* --------------------------- ABOUT GRID ------------------------------- */
+.photo-grid {
+  display: grid;                     /* Enables grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 1rem;                         /* Space between images */
+  padding: 2rem;                     /* Outer spacing */
+  max-width: 1000px;                 /* Max container width */
+  margin: 0 auto;                    /* Center grid */
+}
+
+.photo-grid img {
+  width: 100%;                       /* Full width of container */
+  height: auto;                      /* Maintain aspect ratio */
+  border-radius: 6px;                /* Rounds image corners */
+  object-fit: cover;                 /* Ensures image covers box nicely */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+
+/* ---------------------------  FOOTER  --------------------------------- */
+footer nav ul {
+  display: flex;                     /* Aligns icons in a row */
+  justify-content: center;          /* Centers the icons */
+  gap: 1rem;                         /* Adds space between icons */
+  padding: 1rem 0;                   /* Adds padding above and below */
+  margin: 0;                         /* Removes default margin */
+}
+
+footer nav img {
+  width: 24px;                       /* Sets fixed icon width */
+  height: 24px;                      /* Sets fixed icon height */
+}
