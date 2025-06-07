@@ -73,7 +73,7 @@ main h1 {
 
 
 /* ---------------------  MAIN IMAGE & PARAGRAPH  ----------------------- */
-main section img {
+main .intro-section img {
   width: 100%;                       /* Makes image responsive */
   max-width: 700px;                  /* Limits image size */
   display: block;                    /* Prevents inline gaps */
@@ -81,7 +81,7 @@ main section img {
   border-radius: 6px;                /* Rounds image corners */
 }
 
-main p {
+main .intro-section p {
   max-width: 900px;                  /* Restricts line length */
   margin: 1.5rem auto;               /* Centers paragraph with margin */
   text-align: center;                /* Centers the text */
@@ -91,12 +91,14 @@ main p {
 
 
 /* -----------------  EVENTS & SHARK SPOTLIGHT SECTION  ----------------- */
-main section.events-spotlight-wrapper {
+.events-spotlight-wrapper {
   display: flex;                     /* Creates horizontal layout */
   justify-content: center;          /* Centers the columns */
+  align-items: flex-start;          /* Aligns tops of both sections */
   gap: 2rem;                         /* Adds space between columns */
   padding: 2rem;                     /* Adds padding around section */
   background-color: #f8fdf8;         /* Light greenish background for visual grouping */
+  flex-wrap: wrap;                  /* Ensures responsiveness on small screens */
 }
 
 .events-box,
@@ -169,6 +171,3 @@ footer nav img {
   height: 24px;                      /* Sets fixed icon height */
 }
 
-  width: 24px;                       /* Sets fixed icon width */
-  height: 24px;                      /* Sets fixed icon height */
-}
