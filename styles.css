@@ -96,6 +96,7 @@ main section.events-spotlight-wrapper {
   justify-content: center;          /* Centers the columns */
   gap: 2rem;                         /* Adds space between columns */
   padding: 2rem;                     /* Adds padding around section */
+  background-color: #f8fdf8;         /* Light greenish background for visual grouping */
 }
 
 .events-box,
@@ -105,6 +106,7 @@ main section.events-spotlight-wrapper {
   border-radius: 5px;                /* Rounds the box corners */
   width: 300px;                      /* Sets fixed width */
   text-align: center;                /* Centers the text */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
 
 .events-box {
@@ -113,7 +115,7 @@ main section.events-spotlight-wrapper {
 
 .events-box h2,
 .spotlight-box h2 {
-  background-color: mediumseagreen;  /* Sets banner background */
+  background-color: #27ae60;         /* Adjusted to a clearer green */
   color: white;                      /* Sets banner text to white */
   padding: 0.5rem;                   /* Adds space inside banner */
   border-radius: 5px;                /* Rounds banner corners */
@@ -128,6 +130,7 @@ main section.events-spotlight-wrapper {
   margin: 0;                         /* Removes default margin */
   font-weight: bold;                /* Makes list items bold */
   font-size: 1.1rem;                /* Slightly larger text */
+  text-align: left;                 /* Left-align event items for readability */
 }
 
 .events-box li {
@@ -141,7 +144,7 @@ main section.events-spotlight-wrapper {
 }
 
 .spotlight-box p {
-  background-color: mediumseagreen;  /* Sets background for name tag */
+  background-color: #27ae60;         /* Adjusted green for better contrast */
   color: white;                      /* Sets text color to white */
   font-weight: bold;                /* Makes name bold */
   font-family: monospace;            /* Uses monospace font */
@@ -162,6 +165,10 @@ footer nav ul {
 }
 
 footer nav img {
+  width: 24px;                       /* Sets fixed icon width */
+  height: 24px;                      /* Sets fixed icon height */
+}
+
   width: 24px;                       /* Sets fixed icon width */
   height: 24px;                      /* Sets fixed icon height */
 }
