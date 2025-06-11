@@ -90,7 +90,7 @@ main .intro-section p {
 }
 
 
-/* -----------------  EVENTS & SHARK SPOTLIGHT SECTION (MERGED) ----------------- */
+/* -----------------  EVENTS & SHARK SPOTLIGHT SECTION  ----------------- */
 .events-spotlight-wrapper {
   display: flex;
   justify-content: center;
@@ -108,15 +108,46 @@ main .intro-section p {
   border-radius: 5px;
   width: 300px;
   text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* EVENTS BOX (with Randomizer) */
 .events-box {
   border: 2px solid #0077cc;
 }
 
-/* Event Generator - Heading */
-.events-box h2,
+.events-box h2 {
+  background-color: #27ae60;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: monospace;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
+}
+
+#event-message {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2d572c;
+}
+
+.events-box button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.events-box button:hover {
+  background-color: #005fa3;
+}
+
+/* SHARK SPOTLIGHT BOX */
 .spotlight-box h2 {
   background-color: #27ae60;
   color: white;
@@ -127,21 +158,6 @@ main .intro-section p {
   margin: 0 0 1rem;
 }
 
-/* Optional Static Events List (if kept) */
-.events-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-align: left;
-}
-
-.events-box li {
-  margin: 0.5rem 0;
-}
-
-/* Shark Spotlight Styling */
 .spotlight-box img {
   width: 100%;
   border-radius: 5px;
@@ -157,29 +173,6 @@ main .intro-section p {
   padding: 0.4rem;
   border-radius: 5px;
   margin: 0.5rem 0 0;
-}
-
-/* Random Event Message + Button */
-#event-message {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  color: #2d572c;
-}
-
-.events-box button {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background-color: #2d572c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.events-box button:hover {
-  background-color: #1f3f1f;
 }
 /* ---------------------------  FOOTER  --------------------------------- */
 footer nav ul {
