@@ -90,73 +90,97 @@ main .intro-section p {
 }
 
 
-/* -----------------  EVENTS & SHARK SPOTLIGHT SECTION  ----------------- */
+/* -----------------  EVENTS & SHARK SPOTLIGHT SECTION (MERGED) ----------------- */
 .events-spotlight-wrapper {
-  display: flex;                     /* Creates horizontal layout */
-  justify-content: center;          /* Centers the columns */
-  align-items: flex-start;          /* Aligns tops of both sections */
-  gap: 2rem;                         /* Adds space between columns */
-  padding: 2rem;                     /* Adds padding around section */
-  background-color: #f8fdf8;         /* Light greenish background for visual grouping */
-  flex-wrap: wrap;                  /* Ensures responsiveness on small screens */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f8fdf8;
+  flex-wrap: wrap;
 }
 
 .events-box,
 .spotlight-box {
-  background-color: #e6ffe6;         /* Light green background */
-  padding: 1rem 2rem;                /* Adds inner spacing */
-  border-radius: 5px;                /* Rounds the box corners */
-  width: 300px;                      /* Sets fixed width */
-  text-align: center;                /* Centers the text */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  background-color: #e6ffe6;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .events-box {
-  border: 2px solid #0077cc;         /* Adds blue border to events box */
+  border: 2px solid #0077cc;
 }
 
+/* Event Generator - Heading */
 .events-box h2,
 .spotlight-box h2 {
-  background-color: #27ae60;         /* Adjusted to a clearer green */
-  color: white;                      /* Sets banner text to white */
-  padding: 0.5rem;                   /* Adds space inside banner */
-  border-radius: 5px;                /* Rounds banner corners */
-  font-family: monospace;            /* Uses monospace for emphasis */
-  letter-spacing: 1px;               /* Adds spacing between letters */
-  margin: 0 0 1rem;                  /* Adds space below heading */
+  background-color: #27ae60;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: monospace;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
 }
 
+/* Optional Static Events List (if kept) */
 .events-box ul {
-  list-style: none;                  /* Removes bullets */
-  padding: 0;                        /* Removes default padding */
-  margin: 0;                         /* Removes default margin */
-  font-weight: bold;                /* Makes list items bold */
-  font-size: 1.1rem;                /* Slightly larger text */
-  text-align: left;                 /* Left-align event items for readability */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: left;
 }
 
 .events-box li {
-  margin: 0.5rem 0;                  /* Adds vertical space between items */
+  margin: 0.5rem 0;
 }
 
+/* Shark Spotlight Styling */
 .spotlight-box img {
-  width: 100%;                       /* Makes image fill container */
-  border-radius: 5px;                /* Rounds image corners */
-  margin-top: 0.5rem;                /* Adds space above image */
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 0.5rem;
 }
 
 .spotlight-box p {
-  background-color: #27ae60;         /* Adjusted green for better contrast */
-  color: white;                      /* Sets text color to white */
-  font-weight: bold;                /* Makes name bold */
-  font-family: monospace;            /* Uses monospace font */
-  font-size: 1.2rem;                /* Sets name text size */
-  padding: 0.4rem;                   /* Adds padding inside name tag */
-  border-radius: 5px;                /* Rounds name tag corners */
-  margin: 0.5rem 0 0;                /* Adds margin above name */
+  background-color: #27ae60;
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  border-radius: 5px;
+  margin: 0.5rem 0 0;
 }
 
+/* Random Event Message + Button */
+#event-message {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #2d572c;
+}
 
+.events-box button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #2d572c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.events-box button:hover {
+  background-color: #1f3f1f;
+}
 /* ---------------------------  FOOTER  --------------------------------- */
 footer nav ul {
   display: flex;                     /* Aligns icons in a row */
