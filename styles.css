@@ -256,3 +256,12 @@ footer nav img {
 .hidden {
   display: none;
 }
+
+.club-section img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  display: block;
+}
