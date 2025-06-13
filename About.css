@@ -92,7 +92,13 @@ main h1 {
   line-height: 1.6;                  /* Increases line spacing */
   padding: 0 1rem;                   /* Adds some side padding */
 }
-
+.about-text {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
 
 /* --------------------------- ABOUT GRID ------------------------------- */
 .about-photo-grid {
