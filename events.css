@@ -161,3 +161,44 @@ footer nav img {
   font-size: 1.1rem;
   font-weight: bold;
 }
+
+
+/* ----- GRID CONTAINER (three columns, centered) ----- */
+.links-section {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);   /* 3 equal columns (220 px each)   */
+  gap: 40px;                                 /* space between cards            */
+  margin: 40px auto;                         /* centers the whole grid         */
+}
+
+/* ----- INDIVIDUAL CARD ----- */
+.link-card {
+  text-align: center;
+  font-family: system-ui, sans-serif;
+}
+
+/* same-size photos */
+.link-card img {
+  width: 220px;        /* must match column width above  */
+  height: 180px;       /* pick any height you like        */
+  object-fit: cover;   /* crops to fill without stretch   */
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,.12);
+}
+
+/* clickable caption */
+.link-card a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background .15s ease;
+}
+
+.link-card a:hover {
+  background: #f0f0f0;
+}
