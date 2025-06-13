@@ -1,112 +1,154 @@
-/* ==== RESET ==== */
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;background:#f5f7fa;color:#111}
-a{text-decoration:none;color:#000}
-img{max-width:100%;height:auto;display:block}
+/* ==== RESET + BASE ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* ==== LAYOUT HELPERS ==== */
-.container{max-width:1200px;margin:0 auto;padding:0 1rem}
-.page-title{text-align:center;font-size:4rem;letter-spacing:3px;margin:2.5rem 0}
-
-/* -------------------------  GLOBAL / RESET  --------------------------- */
 body {
-  margin: 0;                          /* Removes default margin */
-  padding: 0;                         /* Removes default padding */
-  font-family: Arial, sans-serif;     /* Sets a clean, readable font */
-  color: #000;                        /* Sets text color to black */
-  background: #fff;                   /* Sets background to white */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: #f5f7fa;
+  color: #111;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-/* ----------------------------  HEADER  -------------------------------- */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ==== LAYOUT ==== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  margin: 2.5rem 0;
+}
+
+/* ==== HEADER + NAV ==== */
 header {
-  display: flex;                      /* Enables Flexbox layout */
-  justify-content: space-between;    /* Spaces logo and nav apart */
-  align-items: center;               /* Vertically centers items */
-  padding: 1rem 2rem;                /* Adds space around the header */
-  border-bottom: 2px solid #ddd;     /* Light gray line under header */
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
 }
 
-header figure,
-header div {
-  margin: 0;                          /* Removes default margin */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
 }
 
-header img {
-  height: 60px;                       /* Sets fixed height for logo */
+.logo img {
+  max-width: 180px;
 }
 
-
-/* --------------------------  NAVIGATION  ------------------------------ */
-nav ul {
-  list-style: none;                  /* Removes bullet points */
-  display: flex;                     /* Horizontally lays out nav items */
-  gap: 1.5rem;                       /* Adds spacing between nav items */
-  align-items: center;              /* Aligns items vertically */
-  padding: 0;                        /* Removes default padding */
-  margin: 0;                         /* Removes default margin */
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-weight: 600;
 }
 
-nav li {
-  display: inline;                   /* Makes list items inline */
+.nav-list a {
+  font-size: 0.95rem;
+  color: #000;
 }
 
-nav a {
-  text-decoration: none;             /* Removes underline from links */
-  color: #000;                       /* Sets link color to black */
-  font-weight: bold;                /* Makes links bold */
+.nav-list a:hover {
+  opacity: 0.7;
 }
 
-nav input[type="text"] {
-  padding: 6px 10px;                 /* Adds space inside input box */
-  border: none;                      /* Removes default border */
-  border-radius: 5px;                /* Rounds input corners */
-  background-color: #000;            /* Sets background to black */
-  color: white;                      /* Sets text color to white */
-  font-weight: bold;                /* Makes input text bold */
+.search-wrap input {
+  width: 160px;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-size: 0.85rem;
 }
 
-/* ==== CALENDAR ==== */
-.calendar-image{margin-bottom:2.5rem}
-.calendar-image img{width:100%;max-width:700px;margin:0 auto;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-
-/* ==== FEATURE PHOTO ==== */
-.event-image{margin-bottom:3rem;text-align:center}
-.event-image img{width:100%;max-width:500px;margin:0 auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-
-/* ==== QUICK LINKS ==== */
-.links-section{display:flex;justify-content:center;gap:2rem;margin-bottom:4rem;flex-wrap:nowrap;overflow-x:auto}
-.link-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.06);transition:transform .2s ease;width:240px;flex:0 0 240px;text-align:center}
-.link-card:hover{transform:translateY(-4px)}
-.link-card p{padding:.85rem 0;font-weight:600;color:#003366}
-
-/* ==== FOOTER ==== */
-footer{background:#fff;border-top:1px solid #e1e1e1;padding:1.25rem 0}
-.social-icons{list-style:none;display:flex;justify-content:center;gap:1.5rem}
-.social-icon{width:28px;height:28px}
-
-/* ==== RESPONSIVE ==== */
-@media(max-width:992px){
-  .page-title{font-size:3rem}
-  .links-section{gap:1rem}
-}
-@media(max-width:600px){
-  .logo img{max-width:140px}
-  .nav-list{gap:1rem;font-size:.83rem}
-  .search-wrap input{width:110px}
-  .links-section{flex-wrap:wrap}
-  .link-card{flex:1 1 100%;max-width:340px;margin:0 auto}
+/* ==== CALENDAR IMAGE FIX (EVENTS PAGE) ==== */
+.calendar-image {
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
+.calendar-image img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
+/* ==== ABOUT PAGE IMAGE GRID ==== */
 .about-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   padding: 2rem 0;
 }
+
 .about-gallery img {
   width: 100%;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background: #fff;
+  border-top: 1px solid #e1e1e1;
+  padding: 1.25rem 0;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 992px) {
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .nav-list {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo img {
+    max-width: 140px;
+  }
+
+  .nav-list {
+    gap: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .search-wrap input {
+    width: 110px;
+  }
 }
