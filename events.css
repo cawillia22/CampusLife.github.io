@@ -202,3 +202,13 @@ footer nav img {
 .link-card a:hover {
   background: #f0f0f0;
 }
+/* ————————————————————————
+   Page title on events.html
+   ———————————————————————— */
+.page-heading {
+  text-align: center;            /* centers the word */
+  font-size: clamp(2.75rem, 6vw, 4rem); /* scales up on big screens */
+  margin: 40px 0 60px;           /* top / bottom spacing */
+  font-weight: 700;              /* bold, if it isn’t already */
+  letter-spacing: 2px;           /* a little breathing room */
+}
