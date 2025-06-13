@@ -18,10 +18,10 @@ body {
 /* ----------------------------  HEADER  -------------------------------- */
 header {
   display: flex;                      /* Enables Flexbox layout */
-  justify-content: space-between;    /* Spaces logo and nav apart */
-  align-items: center;               /* Vertically centers items */
-  padding: 1rem 2rem;                /* Adds space around the header */
-  border-bottom: 2px solid #ddd;     /* Light gray line under header */
+  justify-content: space-between;     /* Spaces logo and nav apart */
+  align-items: center;                /* Vertically centers items */
+  padding: 1rem 2rem;                 /* Adds space around the header */
+  border-bottom: 2px solid #ddd;      /* Light gray line under header */
 }
 
 header figure,
@@ -36,98 +36,112 @@ header img {
 
 /* --------------------------  NAVIGATION  ------------------------------ */
 nav ul {
-  list-style: none;                  /* Removes bullet points */
-  display: flex;                     /* Horizontally lays out nav items */
-  gap: 1.5rem;                       /* Adds spacing between nav items */
-  align-items: center;              /* Aligns items vertically */
-  padding: 0;                        /* Removes default padding */
-  margin: 0;                         /* Removes default margin */
+  list-style: none;                   /* Removes bullet points */
+  display: flex;                      /* Horizontally lays out nav items */
+  gap: 1.5rem;                        /* Adds spacing between nav items */
+  align-items: center;                /* Aligns items vertically */
+  padding: 0;                         /* Removes default padding */
+  margin: 0;                          /* Removes default margin */
 }
 
 nav li {
-  display: inline;                   /* Makes list items inline */
+  display: inline;                    /* Makes list items inline */
 }
 
 nav a {
-  text-decoration: none;             /* Removes underline from links */
-  color: #000;                       /* Sets link color to black */
-  font-weight: bold;                /* Makes links bold */
+  text-decoration: none;              /* Removes underline from links */
+  color: #000;                        /* Sets link color to black */
+  font-weight: bold;                  /* Makes links bold */
 }
 
 nav input[type="text"] {
-  padding: 6px 10px;                 /* Adds space inside input box */
-  border: none;                      /* Removes default border */
-  border-radius: 5px;                /* Rounds input corners */
-  background-color: #000;            /* Sets background to black */
-  color: white;                      /* Sets text color to white */
-  font-weight: bold;                /* Makes input text bold */
+  padding: 6px 10px;                  /* Adds space inside input box */
+  border: none;                       /* Removes default border */
+  border-radius: 5px;                 /* Rounds input corners */
+  background-color: #000;             /* Sets background to black */
+  color: white;                       /* Sets text color to white */
+  font-weight: bold;                  /* Makes input text bold */
 }
 
 
 /* -------------------------  MAIN TITLE  ------------------------------- */
 main h1 {
-  text-align: center;                /* Centers the heading text */
-  font-size: 3rem;                   /* Enlarges the heading */
-  font-weight: bold;                /* Makes heading bold */
-  margin: 2rem 0;                    /* Adds vertical space above/below */
+  text-align: center;                 /* Centers the heading text */
+  font-size: 3rem;                    /* Enlarges the heading */
+  font-weight: bold;                  /* Makes heading bold */
+  margin: 2rem 0;                     /* Adds vertical space above/below */
 }
 
 
 /* ---------------------  MAIN IMAGE & PARAGRAPH  ----------------------- */
 .intro-section img,
 .about-section img {
-  width: 100%;                       /* Makes image responsive */
-  max-width: 800px;                  /* Limits image size */
-  display: block;                    /* Prevents inline gaps */
-  margin: 0 auto;                    /* Centers image horizontally */
-  border-radius: 6px;                /* Rounds image corners */
+  width: 100%;                        /* Makes image responsive */
+  max-width: 800px;                   /* Limits image size */
+  display: block;                     /* Prevents inline gaps */
+  margin: 0 auto;                     /* Centers image horizontally */
+  border-radius: 6px;                 /* Rounds image corners */
 }
 
 .intro-section p,
 .about-section p {
-  max-width: 900px;                  /* Restricts line length */
-  margin: 1.5rem auto;               /* Centers paragraph with margin */
-  text-align: center;                /* Centers the text */
-  font-size: 1.1rem;                 /* Increases text size slightly */
-  line-height: 1.6;                  /* Increases line spacing */
-  padding: 0 1rem;                   /* Adds some side padding */
+  max-width: 900px;                   /* Restricts line length */
+  margin: 1.5rem auto;                /* Centers paragraph with margin */
+  text-align: center;                 /* Centers the text */
+  font-size: 1.1rem;                  /* Increases text size slightly */
+  line-height: 1.6;                   /* Increases line spacing */
+  padding: 0 1rem;                    /* Adds some side padding */
 }
+
 .about-text {
-  max-width: 900px;
+  max-width: 900px;                   /* Restrict width of About page intro */
   margin: 0 auto;
   padding: 0 20px;
   line-height: 1.7;
   font-size: 1.05rem;
 }
 
+
 /* --------------------------- ABOUT GRID ------------------------------- */
 .about-photo-grid {
+  /* 3 perfectly even columns on desktop */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
+  gap: 24px;                          /* Even space between images */
+
+  /* Center the whole grid block */
+  max-width: 960px;
+  margin: 40px auto;                  /* Centers horizontally with top/bottom space */
+  padding: 0 20px;                    /* Optional inner padding */
 }
 
 .about-photo-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* ensures square shape */
-  object-fit: cover;
+  width: 100%;                        /* Fills its grid cell */
+  aspect-ratio: 1 / 1;                /* Forces a square box */
+  object-fit: cover;                  /* Crops without distortion */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
+
+/* Responsive behaviour: 2-across tablet, 1-across phone */
+@media (max-width: 768px) {
+  .about-photo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .about-photo-grid { grid-template-columns: 1fr; }
+}
+
 
 /* ---------------------------  FOOTER  --------------------------------- */
 footer nav ul {
-  display: flex;                     /* Aligns icons in a row */
-  justify-content: center;          /* Centers the icons */
-  gap: 1rem;                         /* Adds space between icons */
-  padding: 1rem 0;                   /* Adds padding above and below */
-  margin: 0;                         /* Removes default margin */
+  display: flex;                      /* Aligns icons in a row */
+  justify-content: center;            /* Centers the icons */
+  gap: 1rem;                          /* Adds space between icons */
+  padding: 1rem 0;                    /* Adds padding above and below */
+  margin: 0;                          /* Removes default margin */
 }
 
 footer nav img {
-  width: 24px;                       /* Sets fixed icon width */
-  height: 24px;                      /* Sets fixed icon height */
+  width: 24px;                        /* Sets fixed icon width */
+  height: 24px;                       /* Sets fixed icon height */
 }
