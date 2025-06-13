@@ -1,94 +1,94 @@
 /* ====================================================================== */
 /*  Campus Life – external stylesheet                                     */
-/*  Author: Amanda Rodriguez*/
+/*  Author: Amanda Rodriguez                                              */
 /*  Purpose: Styles the Campus Life website and documents each rule set   */
 /* ====================================================================== */
 
-
 /* -------------------------  GLOBAL / RESET  --------------------------- */
-body {
-  margin: 0;                          /* Removes default margin */
-  padding: 0;                         /* Removes default padding */
-  font-family: Arial, sans-serif;     /* Sets a clean, readable font */
-  color: #000;                        /* Sets text color to black */
-  background: #fff;                   /* Sets background to white */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background: #fff;
+}
 
 /* ----------------------------  HEADER  -------------------------------- */
 header {
-  display: flex;                      /* Enables Flexbox layout */
-  justify-content: space-between;    /* Spaces logo and nav apart */
-  align-items: center;               /* Vertically centers items */
-  padding: 1rem 2rem;                /* Adds space around the header */
-  border-bottom: 2px solid #ddd;     /* Light gray line under header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ddd;
 }
 
 header figure {
-  margin: 0;                          /* Removes default margin on figure */
+  margin: 0;
 }
 
 header img {
-  height: 60px;                       /* Sets fixed height for logo */
+  height: 60px;
 }
-
 
 /* --------------------------  NAVIGATION  ------------------------------ */
 nav ul {
-  list-style: none;                  /* Removes bullet points */
-  display: flex;                     /* Horizontally lays out nav items */
-  gap: 1.5rem;                       /* Adds spacing between nav items */
-  align-items: center;              /* Aligns items vertically */
-  padding: 0;                        /* Removes default padding */
-  margin: 0;                         /* Removes default margin */
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 nav li {
-  display: inline;                   /* Makes list items inline */
+  display: inline;
 }
 
 nav a {
-  text-decoration: none;             /* Removes underline from links */
-  color: #000;                       /* Sets link color to black */
-  font-weight: bold;                /* Makes links bold */
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
 
 nav input[type="text"] {
-  padding: 6px 10px;                 /* Adds space inside input box */
-  border: none;                      /* Removes default border */
-  border-radius: 5px;                /* Rounds input corners */
-  background-color: #000;            /* Sets background to black */
-  color: white;                      /* Sets text color to white */
-  font-weight: bold;                /* Makes input text bold */
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
 }
-
 
 /* -------------------------  MAIN TITLE  ------------------------------- */
 main h1 {
-  text-align: center;                /* Centers the heading text */
-  font-size: 3rem;                   /* Enlarges the heading */
-  font-weight: bold;                /* Makes heading bold */
-  margin: 2rem 0;                    /* Adds vertical space above/below */
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 2rem 0;
 }
-
 
 /* ---------------------  MAIN IMAGE & PARAGRAPH  ----------------------- */
 main .intro-section img {
-  width: 100%;                       /* Makes image responsive */
-  max-width: 700px;                  /* Limits image size */
-  display: block;                    /* Prevents inline gaps */
-  margin: 0 auto;                    /* Centers image horizontally */
-  border-radius: 6px;                /* Rounds image corners */
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
 }
 
 main .intro-section p {
-  max-width: 900px;                  /* Restricts line length */
-  margin: 1.5rem auto;               /* Centers paragraph with margin */
-  text-align: center;                /* Centers the text */
-  font-size: 1.1rem;                 /* Increases text size slightly */
-  line-height: 1.6;                  /* Increases line spacing */
+  max-width: 900px;
+  margin: 1.5rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
-
 
 /* -----------------  EVENTS & SHARK SPOTLIGHT SECTION  ----------------- */
 .events-spotlight-wrapper {
@@ -174,50 +174,47 @@ main .intro-section p {
   border-radius: 5px;
   margin: 0.5rem 0 0;
 }
+
 /* ---------------------------  FOOTER  --------------------------------- */
 footer nav ul {
-  display: flex;                     /* Aligns icons in a row */
-  justify-content: center;          /* Centers the icons */
-  gap: 1rem;                         /* Adds space between icons */
-  padding: 1rem 0;                   /* Adds padding above and below */
-  margin: 0;                         /* Removes default margin */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin: 0;
 }
 
 footer nav img {
-  width: 24px;                       /* Sets fixed icon width */
-  height: 24px;                      /* Sets fixed icon height */
+  width: 24px;
+  height: 24px;
 }
 
 .event-section {
-    background-color: #e0f7fa;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 500px;
-    margin: 2rem auto;
-    text-align: center;
+  background-color: #e0f7fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .event-section button {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #007acc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .event-section button:hover {
-    background-color: #005fa3;
+  background-color: #005fa3;
 }
 
-/* ============ GLOBAL RESET EXAMPLE (keep your site styles) ============ */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, sans-serif; }
-
-/* POPUP STYLES */
+/* --------------------------  POPUP STYLES  --------------------------- */
 #popup-overlay {
   position: fixed;
   inset: 0;
