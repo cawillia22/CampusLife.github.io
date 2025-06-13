@@ -1,16 +1,16 @@
-window.addEventListener('load', function () {
-  const popup = document.getElementById('popup-overlay');
+window.addEventListener('load', () => {
+  const popup    = document.getElementById('popup-overlay');
   const closeBtn = document.getElementById('popup-close');
 
-  if (!sessionStorage.getItem('popupSeen')) {
-    if (popup) {
-      popup.classList.remove('hidden');
-    }
+  // show the popup once per session
+  if (popup && !sessionStorage.getItem('popupSeen')) {
+    popup.classList.remove('hidden');
     sessionStorage.setItem('popupSeen', 'true');
   }
 
-  if (closeBtn && popup) {
-    closeBtn.addEventListener('click', function () {
+  // close handler
+  if (popup && closeBtn) {
+    closeBtn.addEventListener('click', () => {
       popup.classList.add('hidden');
     });
   }
