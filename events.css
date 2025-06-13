@@ -1,143 +1,122 @@
-/* -----------  Base Reset  ----------- */
+/* ========== RESET & BASICS ========== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.5;
-  color: #333;
-  background-color: #f5f7fa;
+  background: #f5f7fa;
+  color: #111;
 }
-a { color: #003366; text-decoration: none; }
+a {
+  text-decoration: none;
+  color: #000;
+}
 img { max-width: 100%; height: auto; display: block; }
 
-/* -----------  Layout Helpers  ----------- */
+/* ========== LAYOUT HELPERS ========== */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 .page-title {
   text-align: center;
-  margin: 2rem 0 1.5rem;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  color: #003366;
+  font-size: 4rem;            /* massive like Figma */
+  letter-spacing: 3px;
+  margin: 2.5rem 0;
+  color: #000;
 }
 
-/* -----------  Header / Nav  ----------- */
+/* ========== HEADER + NAV ========== */
 header {
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border-bottom: 1px solid #e1e1e1;
 }
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0.75rem 0;
 }
 .logo img { max-width: 180px; }
 
-nav ul.nav-list {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+/* nav pushed right of logo */
+.header-inner nav { margin-left: auto; }
+.nav-list {
   list-style: none;
-  gap: 1.25rem;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  font-weight: 600;
 }
-
-nav ul.nav-list li {
-  font-weight: bold;
-}
-
-nav ul.nav-list li a {
+.nav-list a {
   color: #000;
-  padding: 0.5rem;
+  font-size: 0.95rem;
 }
+.nav-list a:hover { opacity: 0.7; }
 
+/* search box */
 .search-wrap input {
-  background-color: white;
-  color: #000;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  width: 160px;
   padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-size: 0.85rem;
 }
 
-/* -----------  Intro Section  ----------- */
-.intro-section {
-  display: grid;
-  gap: 1.25rem;
+/* ========== CALENDAR IMAGE ========== */
+.calendar-image {
   margin-bottom: 2.5rem;
 }
-.intro-section img {
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-.intro-section p {
-  font-size: 1.05rem;
-}
-
-/* -----------  Events / Spotlight Split  ----------- */
-.events-spotlight-wrapper {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  margin-bottom: 3rem;
-}
-.events-box, .spotlight-box {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-.events-box button {
-  margin-top: 1rem;
-  background: #003366;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
+.calendar-image img {
+  width: 100%;             /* responsive */
+  max-width: 900px;        /* cap so it never overflows */
+  margin: 0 auto;          /* center inside container */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border-radius: 6px;
-  cursor: pointer;
-}
-.events-box button:hover { opacity: 0.9; }
-.spotlight-box img { border-radius: 10px; margin-bottom: 0.75rem; }
-
-/* -----------  Calendar & Event Images  ----------- */
-.calendar-image, .event-image { margin-bottom: 2.5rem; }
-.calendar-image img, .event-image img {
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* -----------  Quick Links  ----------- */
+/* ========== FEATURE EVENT IMAGE ========== */
+.event-image { margin-bottom: 3rem; }
+.event-image img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ========== QUICK‑LINK CARDS ========== */
 .links-section {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
-  margin-bottom: 3rem;
+  flex-wrap: nowrap;    /* single row on desktop */
+  margin-bottom: 4rem;
 }
 .link-card {
-  width: 200px;
-  text-align: center;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.06);
   transition: transform 0.2s ease;
+  width: 280px;
+  flex: 0 0 280px;   /* fixed width so exactly three fit */
+  text-align: center;
 }
 .link-card:hover { transform: translateY(-4px); }
 .link-card p {
-  padding: 0.75rem 0;
+  padding: 0.85rem 0;
   font-weight: 600;
   color: #003366;
 }
 
-/* -----------  Footer  ----------- */
+/* ========== FOOTER ========== */
 footer {
-  background: #003366;
+  background: #fff;
+  border-top: 1px solid #e1e1e1;
   padding: 1.25rem 0;
-  color: #fff;
-  margin-top: 3rem;
 }
 .social-icons {
   list-style: none;
@@ -147,24 +126,16 @@ footer {
 }
 .social-icon { width: 28px; height: 28px; }
 
-/* -----------  Responsive Tweaks  ----------- */
-@media (max-width: 540px) {
-  nav ul { gap: 1rem; font-size: 0.9rem; }
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+@media (max-width: 992px) {
+  .page-title { font-size: 3rem; }
+  .links-section { flex-wrap: wrap; }
+  .link-card { flex: 1 1 300px; max-width: 350px; margin: 0 auto; }
+}
+@media (max-width: 600px) {
+  .nav-list { gap: 1rem; font-size: 0.85rem; }
   .logo img { max-width: 140px; }
   .search-wrap input { width: 110px; }
+  .links-section { gap: 1rem; }
+  .link-card { flex: 1 1 100%; width: 100%; }
 }
-/* ---------- Calendar & Quick‑link tweaks ---------- */
-.calendar-image img{
-  width:100%;          /* never larger than container */
-  max-width:900px;     /* optional hard cap */
-  margin:0 auto;
-  height:auto;
-}
-
-.links-section{
-  display:flex;
-  gap:2rem;
-  justify-content:center;
-  flex-wrap:nowrap;    /* force into a single row on normal desktop widths */
-}
-.link-card{flex:1 1 280px;max-width:300px}
