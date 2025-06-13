@@ -70,8 +70,8 @@ header {
   margin-bottom: 2.5rem;
 }
 .calendar-image img {
-  width: 100%;             /* responsive */
-  max-width: 900px;        /* cap so it never overflows */
+  width: 50%;             /* responsive */
+  width: 250px;        /* cap so it never overflows */
   margin: 0 auto;          /* center inside container */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border-radius: 6px;
