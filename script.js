@@ -1,13 +1,15 @@
-const events = [
-    "Karaoke Night – Thursday at 7PM!",
-    "Free Coffee Friday – Student Lounge, 9AM!",
-    "Game Tournament – Saturday at Noon!",
-    "Trivia Night – Wednesday at 6PM!",
-    "Movie and Popcorn – Friday at 8PM!",
-    "Wellness Yoga – Monday at 10AM!"
-];
+window.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("popup-overlay");
+  const closeBtn = document.getElementById("popup-close");
 
-function showRandomEvent() {
-    const randomIndex = Math.floor(Math.random() * events.length);
-    document.getElementById("event-message").textContent = events[randomIndex];
-}
+  if (!sessionStorage.getItem("popupSeen")) {
+    popup.classList.remove("hidden");
+    sessionStorage.setItem("popupSeen", "true");
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      popup.classList.add("hidden");
+    });
+  }
+});
