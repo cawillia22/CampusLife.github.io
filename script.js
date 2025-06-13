@@ -11,10 +11,3 @@ function showRandomEvent() {
     const randomIndex = Math.floor(Math.random() * events.length);
     document.getElementById("event-message").textContent = events[randomIndex];
 }
-<script>
-  function closePopup() {
-    document.getElementById('popup-overlay').style.display = 'none';
-  }
-
-  // Optionally, you could add a delay or a cookie here
-</script>
