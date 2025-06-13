@@ -1,62 +1,69 @@
 /* -------------------------  GLOBAL / RESET  --------------------------- */
 body {
-  margin: 0;                          /* Removes default margin */
-  padding: 0;                         /* Removes default padding */
-  font-family: Arial, sans-serif;     /* Sets a clean, readable font */
-  color: #000;                        /* Sets text color to black */
-  background: #fff;                   /* Sets background to white */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #000;
+  background: #fff;
 }
-
 
 /* ----------------------------  HEADER  -------------------------------- */
 header {
-  display: flex;                      /* Enables Flexbox layout */
-  justify-content: space-between;    /* Spaces logo and nav apart */
-  align-items: center;               /* Vertically centers items */
-  padding: 1rem 2rem;                /* Adds space around the header */
-  border-bottom: 2px solid #ddd;     /* Light gray line under header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ddd;
 }
 
 header figure,
 header div {
-  margin: 0;                          /* Removes default margin */
+  margin: 0;
 }
 
 header img {
-  height: 60px;                       /* Sets fixed height for logo */
+  height: 60px;
 }
-
 
 /* --------------------------  NAVIGATION  ------------------------------ */
 nav ul {
-  list-style: none;                  /* Removes bullet points */
-  display: flex;                     /* Horizontally lays out nav items */
-  gap: 1.5rem;                       /* Adds spacing between nav items */
-  align-items: center;              /* Aligns items vertically */
-  padding: 0;                        /* Removes default padding */
-  margin: 0;                         /* Removes default margin */
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 nav li {
-  display: inline;                   /* Makes list items inline */
+  display: inline;
 }
 
 nav a {
-  text-decoration: none;             /* Removes underline from links */
-  color: #000;                       /* Sets link color to black */
-  font-weight: bold;                /* Makes links bold */
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
 
 nav input[type="text"] {
-  padding: 6px 10px;                 /* Adds space inside input box */
-  border: none;                      /* Removes default border */
-  border-radius: 5px;                /* Rounds input corners */
-  background-color: #000;            /* Sets background to black */
-  color: white;                      /* Sets text color to white */
-  font-weight: bold;                /* Makes input text bold */
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
 }
 
-/* ==== CALENDAR IMAGE FIX (EVENTS PAGE) ==== */
+/* --------------------- PAGE TITLE --------------------- */
+.page-heading {
+  text-align: center;
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  margin: 40px 0 60px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* --------------------- CALENDAR IMAGE --------------------- */
 .calendar-image {
   margin-bottom: 2.5rem;
   text-align: center;
@@ -69,66 +76,14 @@ nav input[type="text"] {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-
-
-/* ---------------------------  FOOTER  --------------------------------- */
-footer nav ul {
-  display: flex;                     /* Aligns icons in a row */
-  justify-content: center;          /* Centers the icons */
-  gap: 1rem;                         /* Adds space between icons */
-  padding: 1rem 0;                   /* Adds padding above and below */
-  margin: 0;                         /* Removes default margin */
-}
-
-footer nav img {
-  width: 24px;                       /* Sets fixed icon width */
-  height: 24px;                      /* Sets fixed icon height */
-}
-.about-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 2rem 0;
-}
-.about-gallery img {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* ==== RESPONSIVE ==== */
-@media (max-width: 992px) {
-  .page-title {
-    font-size: 3rem;
-  }
-
-  .nav-list {
-    gap: 1.2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo img {
-    max-width: 140px;
-  }
-
-  .nav-list {
-    gap: 0.8rem;
-    font-size: 0.85rem;
-  }
-
-  .search-wrap input {
-    width: 110px;
-  }
-}
+/* --------------------- 3-COLUMN LINK GRID --------------------- */
 .links-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 40px;
-  max-width: 1000px;
+  flex-wrap: wrap;
   margin: 40px auto;
   padding: 0 20px;
-  justify-items: center;
 }
 
 .link-card {
@@ -150,6 +105,7 @@ footer nav img {
   height: 180px;
   object-fit: cover;
   display: block;
+  border-radius: 10px 10px 0 0;
 }
 
 .link-card a {
@@ -161,53 +117,16 @@ footer nav img {
   text-decoration: none;
 }
 
-
-/* ----- GRID CONTAINER (three columns, centered) ----- */
-.links-section {
-  display: grid;
-  grid-template-columns: repeat(3, 220px);   /* 3 equal columns (220 px each)   */
-  gap: 40px;                                 /* space between cards            */
-  margin: 40px auto;                         /* centers the whole grid         */
+/* ---------------------------  FOOTER  --------------------------------- */
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin: 0;
 }
 
-/* ----- INDIVIDUAL CARD ----- */
-.link-card {
-  text-align: center;
-  font-family: system-ui, sans-serif;
-}
-
-/* same-size photos */
-.link-card img {
-  width: 220px;        /* must match column width above  */
-  height: 180px;       /* pick any height you like        */
-  object-fit: cover;   /* crops to fill without stretch   */
-  border-radius: 10px;
-  display: block;
-  box-shadow: 0 4px 8px rgba(0,0,0,.12);
-}
-
-/* clickable caption */
-.link-card a {
-  display: inline-block;
-  margin-top: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #000;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: background .15s ease;
-}
-
-.link-card a:hover {
-  background: #f0f0f0;
-}
-/* ————————————————————————
-   Page title on events.html
-   ———————————————————————— */
-.page-heading {
-  text-align: center;            /* centers the word */
-  font-size: clamp(2.75rem, 6vw, 4rem); /* scales up on big screens */
-  margin: 40px 0 60px;           /* top / bottom spacing */
-  font-weight: 700;              /* bold, if it isn’t already */
-  letter-spacing: 2px;           /* a little breathing room */
+footer nav img {
+  width: 24px;
+  height: 24px;
 }
