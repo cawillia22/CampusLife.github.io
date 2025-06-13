@@ -217,10 +217,10 @@ footer nav img {
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Arial, sans-serif; }
 
-/* ============ POPUP STYLES ============ */
+/* POPUP STYLES */
 #popup-overlay {
   position: fixed;
-  inset: 0;                         /* shorthand for top:0 right:0 bottom:0 left:0 */
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,28 +229,33 @@ body { font-family: Arial, sans-serif; }
 }
 
 #popup-box {
-  width: 90%;
-  max-width: 400px;
   background: #fff;
   padding: 2rem;
   border-radius: 10px;
+  max-width: 400px;
   text-align: center;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
 }
 
-#popup-box h2 { margin-bottom: 0.75rem; }
+#popup-box h2 {
+  margin-top: 0;
+}
 
 #popup-box button {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   padding: 0.6rem 1.4rem;
+  background: #007a5e;
+  color: white;
   border: none;
   border-radius: 6px;
-  background: #007a5e;
-  color: #fff;
-  font-weight: 600;
   cursor: pointer;
+  font-weight: bold;
 }
-#popup-box button:hover { background: #005f47; }
 
-/* utility class to hide the overlay */
-.hidden { display: none; }
+#popup-box button:hover {
+  background: #005f47;
+}
+
+.hidden {
+  display: none;
+}
