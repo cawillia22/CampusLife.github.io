@@ -153,3 +153,18 @@ footer {
   .logo img { max-width: 140px; }
   .search-wrap input { width: 110px; }
 }
+/* ---------- Calendar & Quick‑link tweaks ---------- */
+.calendar-image img{
+  width:100%;          /* never larger than container */
+  max-width:900px;     /* optional hard cap */
+  margin:0 auto;
+  height:auto;
+}
+
+.links-section{
+  display:flex;
+  gap:2rem;
+  justify-content:center;
+  flex-wrap:nowrap;    /* force into a single row on normal desktop widths */
+}
+.link-card{flex:1 1 280px;max-width:300px}
