@@ -1,72 +1,148 @@
+/* -----------  Base Reset  ----------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: white;
-  text-align: center;
+  font-family: "Arial", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f7fa;
 }
+a { color: #003366; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
 
+/* -----------  Layout Helpers  ----------- */
 .container {
   max-width: 1100px;
-  margin: auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
-
-header h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.calendar-section {
-  margin: 20px auto;
-}
-
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #00695c;
-  color: white;
-  font-weight: bold;
-  padding: 10px;
-}
-
-.calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 1px;
-  background-color: #ccc;
-  padding: 1px;
-  margin-top: 5px;
-}
-
-.calendar > div {
-  background-color: white;
-  padding: 10px;
-  border: 1px solid #ccc;
-  min-height: 60px;
-  text-align: left;
-}
-
-.resources {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-}
-
-.resource {
+.page-title {
   text-align: center;
+  margin: 2rem 0 1.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #003366;
 }
 
-.resource img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+/* -----------  Header / Nav  ----------- */
+header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+.logo img { max-width: 180px; }
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+nav ul li { font-weight: 600; }
+
+/* Search field */
+.search-wrap { display: flex; }
+.search-wrap input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 150px;
 }
 
-.resource a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  display: block;
-  margin-top: 10px;
+/* -----------  Intro Section  ----------- */
+.intro-section {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+.intro-section img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.intro-section p {
+  font-size: 1.05rem;
+}
+
+/* -----------  Events / Spotlight Split  ----------- */
+.events-spotlight-wrapper {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  margin-bottom: 3rem;
+}
+.events-box, .spotlight-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.events-box button {
+  margin-top: 1rem;
+  background: #003366;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.events-box button:hover { opacity: 0.9; }
+.spotlight-box img { border-radius: 10px; margin-bottom: 0.75rem; }
+
+/* -----------  Calendar & Event Images  ----------- */
+.calendar-image, .event-image { margin-bottom: 2.5rem; }
+.calendar-image img, .event-image img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* -----------  Quick Links  ----------- */
+.links-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.link-card {
+  width: 200px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+.link-card:hover { transform: translateY(-4px); }
+.link-card p {
+  padding: 0.75rem 0;
+  font-weight: 600;
+  color: #003366;
+}
+
+/* -----------  Footer  ----------- */
+footer {
+  background: #003366;
+  padding: 1.25rem 0;
+  color: #fff;
+  margin-top: 3rem;
+}
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-icon { width: 28px; height: 28px; }
+
+/* -----------  Responsive Tweaks  ----------- */
+@media (max-width: 540px) {
+  nav ul { gap: 1rem; font-size: 0.9rem; }
+  .logo img { max-width: 140px; }
+  .search-wrap input { width: 110px; }
 }
