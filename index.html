@@ -99,6 +99,19 @@
     <p>The <strong>Resources</strong> and <strong>News</strong> pages are currently under construction.</p>
     <button id="popup-close">Okay</button>
   </div>
+  <script>
+  window.onload = function () {
+    // Only show once per session (optional)
+    if (!sessionStorage.getItem('popupSeen')) {
+      document.getElementById('popup-overlay').classList.remove('hidden');
+      sessionStorage.setItem('popupSeen', 'true');
+    }
+  };
+
+  document.getElementById('popup-close').addEventListener('click', function () {
+    document.getElementById('popup-overlay').classList.add('hidden');
+  });
+</script>
 </body>
 </div>
 </html>
