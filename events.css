@@ -8,15 +8,63 @@ img{max-width:100%;height:auto;display:block}
 .container{max-width:1200px;margin:0 auto;padding:0 1rem}
 .page-title{text-align:center;font-size:4rem;letter-spacing:3px;margin:2.5rem 0}
 
-/* ==== HEADER & NAV ==== */
-header{background:#fff;border-bottom:1px solid #e1e1e1}
-.header-inner{display:flex;align-items:center;padding:.8rem 0}
-.logo img{max-width:180px}
-.header-inner nav{margin-left:auto}
-.nav-list{list-style:none;display:flex;gap:1.6rem;align-items:center;justify-content:center;font-weight:600}
-.nav-list a{font-size:.94rem}
-.nav-list a:hover{opacity:.7}
-.search-wrap input{width:160px;padding:.4rem .6rem;border:none;border-radius:4px;background:#000;color:#fff;font-size:.85rem}
+/* -------------------------  GLOBAL / RESET  --------------------------- */
+body {
+  margin: 0;                          /* Removes default margin */
+  padding: 0;                         /* Removes default padding */
+  font-family: Arial, sans-serif;     /* Sets a clean, readable font */
+  color: #000;                        /* Sets text color to black */
+  background: #fff;                   /* Sets background to white */
+}
+
+
+/* ----------------------------  HEADER  -------------------------------- */
+header {
+  display: flex;                      /* Enables Flexbox layout */
+  justify-content: space-between;    /* Spaces logo and nav apart */
+  align-items: center;               /* Vertically centers items */
+  padding: 1rem 2rem;                /* Adds space around the header */
+  border-bottom: 2px solid #ddd;     /* Light gray line under header */
+}
+
+header figure,
+header div {
+  margin: 0;                          /* Removes default margin */
+}
+
+header img {
+  height: 60px;                       /* Sets fixed height for logo */
+}
+
+
+/* --------------------------  NAVIGATION  ------------------------------ */
+nav ul {
+  list-style: none;                  /* Removes bullet points */
+  display: flex;                     /* Horizontally lays out nav items */
+  gap: 1.5rem;                       /* Adds spacing between nav items */
+  align-items: center;              /* Aligns items vertically */
+  padding: 0;                        /* Removes default padding */
+  margin: 0;                         /* Removes default margin */
+}
+
+nav li {
+  display: inline;                   /* Makes list items inline */
+}
+
+nav a {
+  text-decoration: none;             /* Removes underline from links */
+  color: #000;                       /* Sets link color to black */
+  font-weight: bold;                /* Makes links bold */
+}
+
+nav input[type="text"] {
+  padding: 6px 10px;                 /* Adds space inside input box */
+  border: none;                      /* Removes default border */
+  border-radius: 5px;                /* Rounds input corners */
+  background-color: #000;            /* Sets background to black */
+  color: white;                      /* Sets text color to white */
+  font-weight: bold;                /* Makes input text bold */
+}
 
 /* ==== CALENDAR ==== */
 .calendar-image{margin-bottom:2.5rem}
