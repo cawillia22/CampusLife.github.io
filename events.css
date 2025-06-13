@@ -125,13 +125,16 @@ footer nav img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1000px;     /* Limits grid width */
+  margin: 0 auto;         /* Centers the whole grid */
   padding: 20px;
+  justify-items: center;  /* Optional: centers cards inside each grid cell */
 }
 
 .link-card {
   display: block;
+  width: 100%;
+  max-width: 300px;
   text-align: center;
   text-decoration: none;
   color: #000;
