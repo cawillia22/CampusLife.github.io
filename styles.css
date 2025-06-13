@@ -213,31 +213,36 @@ footer nav img {
     background-color: #005fa3;
 }
 
-/* ===== popup ===== */
+/* ============ GLOBAL RESET EXAMPLE (keep your site styles) ============ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+
+/* ============ POPUP STYLES ============ */
 #popup-overlay {
   position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,.5);
+  inset: 0;                         /* shorthand for top:0 right:0 bottom:0 left:0 */
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(0,0,0,0.5);
   z-index: 9999;
 }
+
 #popup-box {
-  background: #fff;
-  padding: 2rem;
   width: 90%;
   max-width: 400px;
+  background: #fff;
+  padding: 2rem;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 8px 16px rgba(0,0,0,.25);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }
-#popup-box h2 { margin: 0 0 .75rem; }
+
+#popup-box h2 { margin-bottom: 0.75rem; }
+
 #popup-box button {
   margin-top: 1.5rem;
-  padding: .5rem 1.25rem;
+  padding: 0.6rem 1.4rem;
   border: none;
   border-radius: 6px;
   background: #007a5e;
@@ -245,7 +250,7 @@ footer nav img {
   font-weight: 600;
   cursor: pointer;
 }
-#popup-box button:hover { background:#005f47; }
+#popup-box button:hover { background: #005f47; }
 
-/* utility */
-.hidden { display:none; 
+/* utility class to hide the overlay */
+.hidden { display: none; }
