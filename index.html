@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Campus Life – Home</title>
-
-  <!-- site-wide styles -->
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- popup styles (does not conflict with your main CSS) -->
-  <style>
-    #popup-overlay{
-      position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
-      background:rgba(0,0,0,.55);z-index:9999}
-    #popup-box{
-      background:#fff;width:90%;max-width:400px;padding:2rem;border-radius:10px;
-      text-align:center;box-shadow:0 8px 16px rgba(0,0,0,.25)}
-    #popup-box h2{margin-top:0}
-    #popup-box button{
-      margin-top:1.25rem;padding:.5rem 1.4rem;border:none;border-radius:6px;
-      background:#007a5e;color:#fff;font-weight:600;cursor:pointer}
-    #popup-box button:hover{background:#005f47}
-    .hidden{display:none}
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-  <!-- ───────── HEADER ───────── -->
+  <!-- Header with logo and navigation -->
   <header>
-    <figure><img alt="USCB Campus Life Logo" src="Campus Life 2C.png"></figure>
+    <figure>
+      <img alt="USCB Campus Life Logo" src="Campus Life 2C.png">
+    </figure>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -40,12 +23,11 @@
         <li><a href="resources.html">Resources</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><input type="text" placeholder="Search"></li>
+        <li><input type="text" placeholder="Search" /></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ───────── MAIN ───────── -->
   <main>
     <h1>CAMPUS LIFE</h1>
 
@@ -73,7 +55,7 @@
     </section>
   </main>
 
-  <!-- ───────── FOOTER ───────── -->
+  <!-- Footer -->
   <footer>
     <nav>
       <ul class="social-icons">
@@ -85,27 +67,17 @@
     </nav>
   </footer>
 
-  <!-- ───────── POP-UP (hidden by default) ───────── -->
+  <!-- POPUP OVERLAY -->
   <div id="popup-overlay" class="hidden">
     <div id="popup-box">
       <h2>Notice</h2>
       <p>The <strong>Resources</strong> and <strong>News</strong> pages are currently under construction.</p>
-      <button onclick="document.getElementById('popup-overlay').classList.add('hidden')">Okay</button>
+      <button id="popup-close">Okay</button>
     </div>
   </div>
 
-  <!-- main site script -->
+  <!-- SCRIPT -->
   <script src="script.js"></script>
-
-  <!-- show popup once-per-session -->
-  <script>
-    window.addEventListener('load', () => {
-      if (!sessionStorage.getItem('popupSeen')) {
-        document.getElementById('popup-overlay').classList.remove('hidden');
-        sessionStorage.setItem('popupSeen', 'true');
-      }
-    });
-  </script>
-
 </body>
 </html>
+
