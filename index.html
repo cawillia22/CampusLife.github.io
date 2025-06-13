@@ -4,35 +4,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Life – Home</title>
+
+  <!-- site-wide styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- popup styles (does not conflict with your main CSS) -->
+  <style>
+    #popup-overlay{
+      position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+      background:rgba(0,0,0,.55);z-index:9999}
+    #popup-box{
+      background:#fff;width:90%;max-width:400px;padding:2rem;border-radius:10px;
+      text-align:center;box-shadow:0 8px 16px rgba(0,0,0,.25)}
+    #popup-box h2{margin-top:0}
+    #popup-box button{
+      margin-top:1.25rem;padding:.5rem 1.4rem;border:none;border-radius:6px;
+      background:#007a5e;color:#fff;font-weight:600;cursor:pointer}
+    #popup-box button:hover{background:#005f47}
+    .hidden{display:none}
+  </style>
 </head>
+
 <body>
 
-  <!-- Header with logo and navigation -->
+  <!-- ───────── HEADER ───────── -->
   <header>
-    <figure>
-      <img alt="USCB Campus Life Logo" src="Campus Life 2C.png">
-    </figure>
+    <figure><img alt="USCB Campus Life Logo" src="Campus Life 2C.png"></figure>
     <nav>
-    <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="About.html">About</a></li>
-  <li><a href="events.html">Events</a></li>
-  <li><a href="clubs.html">Clubs</a></li>
-  <li><a href="staff.html">Staff</a></li>
-  <li><a href="resources.html">Resources</a></li>
-  <li><a href="news.html">News</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><input type="text" placeholder="Search" /></li>
-</ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><input type="text" placeholder="Search"></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Main title -->
+  <!-- ───────── MAIN ───────── -->
   <main>
     <h1>CAMPUS LIFE</h1>
 
-    <!-- Hero image and paragraph -->
     <section class="intro-section">
       <img src="USCB-Students.jpg" alt="Campus Life Students">
       <p>
@@ -42,119 +58,46 @@
       </p>
     </section>
 
-    <!-- Events and Shark Spotlight side-by-side section -->
     <section class="events-spotlight-wrapper">
+      <div class="events-box">
+        <h2>What's Happening?</h2>
+        <p id="event-message">Click below to find out!</p>
+        <button onclick="showRandomEvent()">Show Me an Event</button>
+      </div>
 
-      <!-- Upcoming Events -->
-<div class="events-spotlight-wrapper">
-
-  <div class="events-box">
-    <h2>What's Happening?</h2>
-    <p id="event-message">Click below to find out!</p>
-    <button onclick="showRandomEvent()">Show Me an Event</button>
-  </div>
-
-  <div class="spotlight-box">
-    <h2>SHARK SPOTLIGHT</h2>
-    <img src="EmilyWorrell.jpg" alt="Layla Hutto">
-    <p>LAYLA HUTTO</p>
-  </div>
-
-</div>
+      <div class="spotlight-box">
+        <h2>SHARK SPOTLIGHT</h2>
+        <img src="EmilyWorrell.jpg" alt="Layla Hutto">
+        <p>LAYLA HUTTO</p>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer with social icons -->
-<!-- Footer -->
-<footer>
-  <nav>
-    <ul class="social-icons">
-      <li>
-        <a href="https://www.facebook.com/" target="_blank">
-          <img src="Screenshot 2025-06-11 142725.png" alt="Facebook" class="social-icon">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/feed/" target="_blank">
-          <img src="Screenshot 2025-06-11 142731.png" alt="LinkedIn" class="social-icon">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-          <img src="Screenshot 2025-06-11 142741.png" alt="YouTube" class="social-icon">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/uscbcampuslife/" target="_blank">
-          <img src="Screenshot 2025-06-11 142747.png" alt="Instagram" class="social-icon">
-        </a>
-      </li>
-    </ul>
-  </nav>
-</footer>
-    <script src="script.js"></script>
- <!-- ►  POPUP STYLES  ◄ -->
-  <style>
-    /* popup container (covers whole screen) */
-    #popup-overlay {
-      position: fixed;
-      inset: 0;                       /* top:0 right:0 bottom:0 left:0 */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,.55);
-      z-index: 9999;
-    }
+  <!-- ───────── FOOTER ───────── -->
+  <footer>
+    <nav>
+      <ul class="social-icons">
+        <li><a href="https://www.facebook.com/" target="_blank"><img src="Screenshot 2025-06-11 142725.png" alt="Facebook" class="social-icon"></a></li>
+        <li><a href="https://www.linkedin.com/feed/" target="_blank"><img src="Screenshot 2025-06-11 142731.png" alt="LinkedIn" class="social-icon"></a></li>
+        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="Screenshot 2025-06-11 142741.png" alt="YouTube" class="social-icon"></a></li>
+        <li><a href="https://www.instagram.com/uscbcampuslife/" target="_blank"><img src="Screenshot 2025-06-11 142747.png" alt="Instagram" class="social-icon"></a></li>
+      </ul>
+    </nav>
+  </footer>
 
-    /* inner white box */
-    #popup-box {
-      background: #fff;
-      width: 90%;
-      max-width: 400px;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 8px 16px rgba(0,0,0,.25);
-    }
-
-    #popup-box h2 { margin-top: 0; }
-
-    #popup-box button {
-      margin-top: 1.25rem;
-      padding: .5rem 1.4rem;
-      border: none;
-      border-radius: 6px;
-      background: #007a5e;
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    #popup-box button:hover { background:#005f47; }
-
-    /* utility */
-    .hidden { display:none; }
-  </style>
-</head>
-<body>
-
-  <!-- ▸▸  YOUR NORMAL PAGE CONTENT … header / main / footer  ◂◂ -->
-  <header> … </header>
-  <main> … </main>
-  <footer> … </footer>
-  <!-- ▸▸-----------------------------------------------------◂◂ -->
-
-  <!-- ▸▸  POP-UP  ◂◂ -->
+  <!-- ───────── POP-UP (hidden by default) ───────── -->
   <div id="popup-overlay" class="hidden">
     <div id="popup-box">
       <h2>Notice</h2>
       <p>The <strong>Resources</strong> and <strong>News</strong> pages are currently under construction.</p>
-      <!-- ✱ inline onclick = guaranteed close ✱ -->
-      <button onclick="document.getElementById('popup-overlay').classList.add('hidden')">
-        Okay
-      </button>
+      <button onclick="document.getElementById('popup-overlay').classList.add('hidden')">Okay</button>
     </div>
   </div>
 
-  <!-- ►  SHOW ONCE-PER-SESSION LOGIC  ◄ -->
+  <!-- main site script -->
+  <script src="script.js"></script>
+
+  <!-- show popup once-per-session -->
   <script>
     window.addEventListener('load', () => {
       if (!sessionStorage.getItem('popupSeen')) {
@@ -163,6 +106,6 @@
       }
     });
   </script>
+
 </body>
 </html>
-
