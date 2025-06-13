@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staff – Campus Life</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    main h1 {
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin: 2rem 0 1rem;
+    }
+
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .staff-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .staff-member img {
+      width: 100%;
+      max-width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .staff-member span {
+      margin-top: 0.75rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with navigation -->
+  <header>
+    <figure>
+      <img alt="USCB Campus Life Logo" src="Campus Life 2C.png" />
+    </figure>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="construction.html">Resources</a></li>
+        <li><a href="contruction.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><input type="text" placeholder="Search" /></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>STAFF</h1>
+
+    <section class="staff-grid">
+      <div class="staff-member">
+        <span>Layla Hutto</span>
+        <img src="staff1.jpg" alt="Layla Hutto" />
+      </div>
+      <div class="staff-member">
+        <span>Mason Kenon</span>
+        <img src="staff2.jpg" alt="Mason Kenon" />
+      </div>
+      <div class="staff-member">
+        <span>Blake Bowman</span>
+        <img src="staff3.jpg" alt="Blake Bowman" />
+      </div>
+      <div class="staff-member">
+        <span>Cassidy Sledge</span>
+        <img src="staff4.jpg" alt="Cassidy Sledge" />
+      </div>
+      <div class="staff-member">
+        <span>Mateo Piedmont</span>
+        <img src="staff5.jpg" alt="Mateo Piedmont" />
+      </div>
+      <div class="staff-member">
+        <span>Carol Ann Stern</span>
+        <img src="staff6.jpg" alt="Carol Ann Stern" />
+      </div>
+      <div class="staff-member">
+        <span>Chloe Smith</span>
+        <img src="staff7.jpg" alt="Chloe Smith" />
+      </div>
+      <div class="staff-member">
+        <span>Amanda Hartley</span>
+        <img src="staff8.jpg" alt="Amanda Hartley" />
+      </div>
+      <div class="staff-member">
+        <span>Jessica Wells</span>
+        <img src="staff9.jpg" alt="Jessica Wells" />
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
