@@ -68,16 +68,26 @@
   </footer>
 
   <!-- POPUP OVERLAY -->
-  <div id="popup-overlay" class="hidden">
-    <div id="popup-box">
+  <div id="popup-overlay" style="display: flex; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center;">
+    <div style="background: #fff; padding: 2rem; border-radius: 10px; max-width: 400px; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.25);">
       <h2>Notice</h2>
       <p>The <strong>Resources</strong> and <strong>News</strong> pages are currently under construction.</p>
-      <button id="popup-close">Okay</button>
+      <button onclick="this.closest('#popup-overlay').style.display='none';" style="margin-top: 1.25rem; padding: 0.6rem 1.4rem; background: #007a5e; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
+        Okay
+      </button>
     </div>
   </div>
 
   <script src="script.js"></script>
-  <script src="popup.js"></script>
+  <script>
+    const popup = document.getElementById("popup-overlay");
+    if (sessionStorage.getItem("popupSeen")) {
+      popup.style.display = "none";
+    } else {
+      sessionStorage.setItem("popupSeen", "true");
+    }
+  </script>
+
 </body>
 </html>
 
