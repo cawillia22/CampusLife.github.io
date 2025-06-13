@@ -96,20 +96,21 @@ main h1 {
 
 /* --------------------------- ABOUT GRID ------------------------------- */
 .photo-grid {
-  display: grid;                     /* Enables grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 1rem;                         /* Space between images */
-  padding: 2rem;                     /* Outer spacing */
-  max-width: 1000px;                 /* Max container width */
-  margin: 0 auto;                    /* Center grid */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 per row */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
 }
 
 .photo-grid img {
-  width: 100%;                       /* Full width of container */
-  height: auto;                      /* Maintain aspect ratio */
-  border-radius: 6px;                /* Rounds image corners */
-  object-fit: cover;                 /* Ensures image covers box nicely */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 }
 
 
